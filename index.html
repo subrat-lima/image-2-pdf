@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IMG 2 PDF</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <section class="container" id="container-select">
+    <h2>Save Image as PDF</h2>
+    <label for="upload" class="upload-label">Select an image</label>
+    <input type="file" id="upload" class="hide" accept="image/*">
+  </section>
+  <section class="container hide" id="container-download">
+    <button id="add-image">Add Image</button>
+    <button id="download">Download</button>
+  </section>
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js" type="module"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
