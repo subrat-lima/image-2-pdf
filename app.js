@@ -1,5 +1,6 @@
 const containerSelect = document.getElementById("container-select");
 const containerDownload = document.getElementById("container-download");
+const containerList = document.getElementById("container-list");
 const fileUploader = document.getElementById("upload");
 const addImageFile = document.getElementById("add-image");
 const download = document.getElementById("download");
@@ -24,6 +25,7 @@ const imageUpload = (e) => {
 
   const file = e.target.files[0];
   setFileName(file);
+  showFileName(file);
 
   const reader = new FileReader();
   reader.onload = loadImage;
@@ -37,6 +39,13 @@ const setFileName = (file) => {
 
   const index = file.name.lastIndexOf(delimiter);
   filename = file.name.slice(0, index);
+}
+
+const showFileName = (file) => {
+  const p = document.createElement("p");
+  p.classList.add("item");
+  p.innerHTML = file.name;
+  containerList.appendChild(p);
 }
 
 const loadImage = (e) => {
@@ -71,6 +80,7 @@ download.onclick = () => {
 
   containerSelect.classList.remove("hide");
   containerDownload.classList.add("hide");
+  containerList.innerHTML = "";
   multipleFiles = false;
 }
 

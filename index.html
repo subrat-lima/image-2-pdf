@@ -8,14 +8,17 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <section class="container" id="container-select">
-    <h2>Save Image as PDF</h2>
-    <label for="upload" class="upload-label">Select an image</label>
-    <input type="file" id="upload" class="hide" accept="image/*">
-  </section>
-  <section class="container hide" id="container-download">
-    <button id="add-image">Add Image</button>
-    <button id="download">Download</button>
+  <section class="container">
+    <section class="container" id="container-list"></section>
+    <section class="container" id="container-select">
+      <h2>Save Image as PDF</h2>
+      <label for="upload" class="upload-label">Select an image</label>
+      <input type="file" id="upload" class="hide" accept="image/*">
+    </section>
+    <section class="container hide" id="container-download">
+      <button id="add-image">Add Image</button>
+      <button id="download">Download</button>
+    </section>
   </section>
   <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js" type="module"></script>
   <script src="app.js" type="module"></script>
